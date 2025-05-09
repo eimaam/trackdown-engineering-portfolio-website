@@ -3,6 +3,27 @@ import { motion } from 'framer-motion';
 import { CallToAction } from '../components/home/CallToAction';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+// Import project images
+import kadSolarConstruction1 from '../assets/images/projects/kad-state-min-solar-construction.png';
+import kadSolarConstruction2 from '../assets/images/projects/kad-state-min-solar-construction2.png';
+import cadp20171 from '../assets/images/projects/cadp-2017-1.png';
+import cadp20172 from '../assets/images/projects/cadp-2017-2.png';
+import cadp20173 from '../assets/images/projects/cadp-2017-3.png';
+import cadp20174 from '../assets/images/projects/cadp-2017-4.png';
+import cadp20175 from '../assets/images/projects/cadp-2017-5.png';
+import cadp20176 from '../assets/images/projects/cadp-2017-6.png';
+import cadp20177 from '../assets/images/projects/cadp-2017-7.png';
+import cadp20178 from '../assets/images/projects/cadp-2017-8.png';
+import cadp20179 from '../assets/images/projects/cadp-2017-9.png';
+import nddpSahel20181 from '../assets/images/projects/nddp-sahel-2018-1.png';
+import nddpSahel20182 from '../assets/images/projects/nddp-sahel-2018-2.png';
+import nddpSahel20183 from '../assets/images/projects/nddp-sahel-2018-3.png';
+import nddpSahel20184 from '../assets/images/projects/nddp-sahel-2018-4.png';
+import nddpSahel20185 from '../assets/images/projects/nddp-sahel-2018-5.png';
+import chineseCampNiger1 from '../assets/images/projects/chinese-camp-niger-2019-1.png';
+import chineseCampNiger2 from '../assets/images/projects/chinese-camp-niger-2019-2.png';
+import chineseCampNiger3 from '../assets/images/projects/chinese-camp-niger-2019-3.png';
+
 interface Project {
   id: number;
   title: string;
@@ -16,7 +37,7 @@ interface Project {
   gallery: string[];
 }
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     id: 1,
     title: 'Solar Powered Boreholes',
@@ -32,12 +53,10 @@ const projects: Project[] = [
       'Water treatment systems',
       'Community access points'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581887301231-c9e2d9b9032a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
+    imageUrl: kadSolarConstruction1,
     gallery: [
-      'https://images.unsplash.com/photo-1581887301231-c9e2d9b9032a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1584467541268-b040f83be3fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1571914041626-6273b726f5f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80'
+      kadSolarConstruction1,
+      kadSolarConstruction2
     ]
   },
   {
@@ -55,12 +74,12 @@ const projects: Project[] = [
       'Technical training for maintenance',
       'Agricultural water supply management'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1560359614-870d1a7ea91d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
+    imageUrl: cadp20171,
     gallery: [
-      'https://images.unsplash.com/photo-1560359614-870d1a7ea91d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1560359614-870d1a7ea91d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1530176538536-1c2eaeb4e137?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80'
+      cadp20171,
+      cadp20172,
+      cadp20173,
+      cadp20174
     ]
   },
   {
@@ -78,12 +97,13 @@ const projects: Project[] = [
       'Water troughs for livestock',
       'Sustainable water management training'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1597598785559-5d85df6440bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
+    imageUrl: cadp20175,
     gallery: [
-      'https://images.unsplash.com/photo-1597598785559-5d85df6440bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1553788064-0b682ebb56b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1504704911898-68304a7d2807?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1581801799888-bc85be7a8070?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80'
+      cadp20175,
+      cadp20176,
+      cadp20177,
+      cadp20178,
+      cadp20179
     ]
   },
   {
@@ -101,12 +121,13 @@ const projects: Project[] = [
       'Animal water troughs',
       'Community water access points'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1576489924387-fe64be169e1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
+    imageUrl: nddpSahel20181,
     gallery: [
-      'https://images.unsplash.com/photo-1576489924387-fe64be169e1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1570199764751-07b9c3f78548?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1525477829362-777dffaf3398?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1583606784123-7c924240fb1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80'
+      nddpSahel20181,
+      nddpSahel20182,
+      nddpSahel20183,
+      nddpSahel20184,
+      nddpSahel20185
     ]
   },
   {
@@ -124,12 +145,11 @@ const projects: Project[] = [
       'Plumbing and sanitation improvements',
       'Aesthetic enhancements'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
+    imageUrl: chineseCampNiger1,
     gallery: [
-      'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80'
+      chineseCampNiger1,
+      chineseCampNiger2,
+      chineseCampNiger3
     ]
   },
   {
@@ -147,12 +167,12 @@ const projects: Project[] = [
       'Water filtration systems',
       'Sustainable maintenance training'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1563514227147-6d2e624f37d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
+    imageUrl: nddpSahel20183,
     gallery: [
-      'https://images.unsplash.com/photo-1563514227147-6d2e624f37d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1575625858913-8a98540cf4d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1630227241657-31ff1f96599a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1592818868298-3ef1786fe8cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80'
+      nddpSahel20183,
+      nddpSahel20184,
+      nddpSahel20185,
+      nddpSahel20181
     ]
   }
 ];

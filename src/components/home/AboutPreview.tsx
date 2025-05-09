@@ -61,15 +61,15 @@ export const AboutPreview: React.FC = () => {
           >
             <div className="aspect-square relative rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1600" 
-                alt="Construction team reviewing plans" 
+                src="https://images.pexels.com/photos/1647416/pexels-photo-1647416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="Construction workers on site" 
                 className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/70 to-transparent flex items-end">
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-primary-900/70 to-transparent flex items-end">
                 <div className="p-6">
                   <span className="text-white text-lg font-medium">Our skilled team delivering excellence</span>
                 </div>
-              </div>
+              </div> */}
             </div>
             
             <div className="hidden lg:block absolute -bottom-8 -left-8 w-48 h-48 bg-secondary-500 rounded-lg -z-10" />

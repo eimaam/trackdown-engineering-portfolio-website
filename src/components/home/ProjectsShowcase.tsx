@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { projects as allProjects } from '../../pages/ProjectsPage';
 
 interface Project {
   id: number;
@@ -12,29 +13,14 @@ interface Project {
   imageUrl: string;
 }
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: 'Water Infrastructure Development',
-    category: 'Water Resources',
-    location: 'Kaduna State',
-    imageUrl: 'https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  },
-  {
-    id: 2,
-    title: 'Solar-Powered Systems',
-    category: 'Energy',
-    location: 'Kano State',
-    imageUrl: 'https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  },
-  {
-    id: 3,
-    title: 'Civil Engineering Works',
-    category: 'Construction',
-    location: 'Federal Capital Territory',
-    imageUrl: 'https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  },
-];
+// Use the first three projects from the main projects list
+const projects: Project[] = allProjects.slice(0, 3).map(project => ({
+  id: project.id,
+  title: project.title,
+  category: project.category,
+  location: project.location,
+  imageUrl: project.imageUrl
+}));
 
 export const ProjectsShowcase: React.FC = () => {
   return (
@@ -83,7 +69,7 @@ export const ProjectsShowcase: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
                   <p className="text-neutral-200 mb-4">{project.location}</p>
                   <Link 
-                    to={`/projects/${project.id}`}
+                    to={`/projects`}
                     className="inline-flex items-center text-white hover:text-secondary-400 transition-colors font-medium"
                   >
                     View Project <ArrowRight className="ml-2 h-4 w-4" />
