@@ -50,7 +50,7 @@ export const CallToAction: React.FC = () => {
                   className="text-primary-900 font-semibold"
                   asChild
                 >
-                  <a href="/contact">
+                  <a href="/contact" className="flex items-center justify-center">
                     Contact Us <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
